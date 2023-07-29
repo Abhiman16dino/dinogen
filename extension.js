@@ -1,4 +1,3 @@
-
 const vscode = require('vscode');
 const genJS = require('./gen');
 
@@ -25,13 +24,12 @@ const genJS = require('./gen');
 						title: "Genrating data..."
 					}, async (progress) => {
 						progress.report({increment: 0});
-						const data = await genJS.genJS();
-						vscode.window.showInformationMessage(`Selected Text: ${data}`);
+						const data = await genJS.genJS(selectedText);
+						console.log(data)
+						vscode.window.showInformationMessage(`Response: ${data}`);
 						progress.report({increment:100});
 					}
 				);
-
-			
 		}
 	});
 

@@ -1,4 +1,4 @@
-async function genJS() {
+async function genJS(prompt) {
 
 const { TextServiceClient } =
   require("@google-ai/generativelanguage").v1beta2;
@@ -13,7 +13,7 @@ const client = new TextServiceClient({
   authClient: new GoogleAuth().fromAPIKey(API_KEY),
 });
 
-const prompt = "Repeat after me: one, two,";
+//const prompt = "Repeat after me: one, two,";
 let data = await client
 .generateText({
   model: MODEL_NAME,
