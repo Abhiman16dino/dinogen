@@ -12,10 +12,21 @@
   "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "dinogen.helloWorld",
-      "title": "Hello World"
-    }]
+    "menus": {
+      "editor/context": [
+        {
+          "command": "dinogen.helloWorld",
+          "group": "navigation",
+          "when": "editorTextFocus"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "dinogen.helloWorld",
+        "title": "DinoGen"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
@@ -23,14 +34,19 @@
     "test": "node ./test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.80.0",
     "@types/glob": "^8.1.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "20.2.5",
+    "@types/vscode": "^1.80.0",
+    "@vscode/test-electron": "^2.3.2",
     "eslint": "^8.41.0",
     "glob": "^8.1.0",
     "mocha": "^10.2.0",
-    "typescript": "^5.1.3",
-    "@vscode/test-electron": "^2.3.2"
+    "typescript": "^5.1.3"
+  },
+  "dependencies": {
+    "@google-ai/generativelanguage": "^0.2.1",
+    "axios": "^1.4.0",
+    "google-auth-library": "^9.0.0"
   }
 }
