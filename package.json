@@ -1,6 +1,7 @@
 {
   "name": "dinogen",
   "displayName": "DinoGen",
+  "publisher": "AbhishekMondal",
   "description": "Generate code from provided text using GenAI",
   "version": "0.0.1",
   "engines": {
