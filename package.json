@@ -4,6 +4,7 @@
   "publisher": "AbhishekMondal",
   "description": "Generate code from provided text using GenAI",
   "version": "0.0.1",
+  "icon": "./Res/logo.png",
   "engines": {
     "vscode": "^1.80.0"
   },
